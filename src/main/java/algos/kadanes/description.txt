@@ -1,4 +1,13 @@
 What ?
+------------------
 
 
-Different problems
+Problems based on this
+----------------------
+
+
+
+Disadvantages of Kadane's Algorithm:
+-------------------------------------
+Only finds sum and not the subarray itself
+Not suitable for non-contiguous subarrays
