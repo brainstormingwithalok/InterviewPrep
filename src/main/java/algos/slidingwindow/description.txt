@@ -1,0 +1,12 @@
+What ?
+------------------
+
+
+Problems based on this
+----------------------
+
+
+
+Disadvantages of Kadane's Algorithm:
+-------------------------------------
+
