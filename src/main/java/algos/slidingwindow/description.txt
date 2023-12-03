@@ -1,5 +1,13 @@
 What ?
 ------------------
+1.Fixed Window:
+In a fixed window problem, we have a predefined window size that remains constant throughout
+the problem-solving process.
+
+2. variable window
+In a variable window problem,the window size is not fixed and can change dynamically based
+on certain conditions or criteria. The template for solving a variable window problem involves maintaining
+two pointers, start and end, which represent the indices of the current window.
 
 
 Problems based on this
@@ -7,6 +15,38 @@ Problems based on this
 
 
 
-Disadvantages of Kadane's Algorithm:
+Disadvantages of sliding window:
 -------------------------------------
+
+References->
+###########
+https://leetcode.com/discuss/interview-question/3722472/mastering-sliding-window-technique-a-comprehensive-guide
+
+Types
+
+Questions On Fixed window size
+----------------------
+Substrings-of-size-three-with-distinct-characters
+Substring-with-concatenation-of-all-words
+Maximum-number-of-vowels-in-a-substring-of-given-length
+Maximum-number-of-occurrences-of-a-substrin
+Maximum Average Subarray I
+Maximum Points You Can Obtain from Cards
+Find-all-anagrams-in-a-string
+K Radius Subarray Averages
+Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold
+
+Questions On variable window size
+------------------------------------
+Longest Substring Without Repeating Characters
+Longest Repeating Character Replacement
+Sliding Window Maximum
+Minimum Window Substring
+Minimum Size Subarray Sum
+Minimum Consecutive Cards to Pick Up
+Maximum Erasure Value
+Fruit Into Baskets
+Count Number of Nice Subarrays
+Arithmetic Slices
+Subarrays-with-k-different-integers
 
