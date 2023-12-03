@@ -21,8 +21,28 @@ package main.java.algos.kadanes;
 public class MaximumSubArray {
 
     public static void main(String[] args) {
-        int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
-        System.out.println(maxSubArray(arr));
+
+/*
+ int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+System.out.println(maxSubArray(arr));*/
+
+        //Negative
+        int[] arr = {-2, -1, -3, -4, -1, -2, -1, -5, -4};
+        System.out.println(maxSubArrayWithAllNegative(arr));
+    }
+
+    public static int maxSubArrayWithAllNegative(int[] nums) {
+        int currentSum = 0;
+        int maxSum = Integer.MIN_VALUE;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > currentSum) {
+                maxSum = Math.max(nums[i], maxSum);
+            } else {
+                currentSum = currentSum + nums[i];
+                maxSum = Math.max(currentSum, maxSum);
+            }
+        }
+        return maxSum;
     }
 
     public static int maxSubArray(int[] nums) {
