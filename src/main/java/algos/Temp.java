@@ -4,32 +4,32 @@ import java.util.*;
 
 public class Temp {
     public static void main(String[] args) {
-        int[] arr={1,2,3,1,1};
-        System.out.println(findPeakElement(arr));
+        int[] arr={5,7,7,8,8,10};
+        System.out.println(findPeakElement(arr,8));
 
     }
 
 
-    public static int findPeakElement(int[] nums) {
+    public static int[] findPeakElement(int[] nums, int target) {
         int left=0;int right=nums.length-1;
-
-        int mid=0;
-        if(nums.length==0){
-            return 0;
-        }
+        int[] result={-1,-1};
+        int index1=-1; int index2=-1;
 
         while(left<right){
-            mid=left+ (right-left)/2;
+            int mid=left+ (right-left)/2;
 
-            if(nums[mid]>nums[mid+1]){
-                right=mid-1;
+            if(nums[mid]==target){
+
+            }
+            if(nums[mid]>target){
+                right=mid;
             }
             else{
-                left=mid;
+                left=mid+1;
             }
         }
 
-        return mid;
+        return result;
 
 
     }
