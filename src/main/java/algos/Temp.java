@@ -6,10 +6,62 @@ import java.util.*;
 
 public class Temp {
     public static void main(String[] args) {
-        int[] nums={3,2,2,3};
+        int[] nums={1,2,3,4,5};
 
-        System.out.println(removeElement(nums,3));
+        System.out.println(canCross(nums));
 
+    }
+
+    public static int maxProfit(int[] prices) {
+
+
+        int min=Integer.MAX_VALUE;
+        int maxProfit=0;
+
+        for(int i=0;i<prices.length;i++){
+
+            if(prices[i]<min){
+                min=prices[i];
+                continue;
+
+            }
+            if(prices[i]>min){
+                maxProfit=maxProfit+ (prices[i]-min);
+                min=Integer.MAX_VALUE;
+            }
+        }
+        return maxProfit;
+    }
+
+    public static boolean canCross(int[] stones) {
+
+
+
+        int k=1;
+        int prevK=0;
+        for(int i=1;i<stones.length;i++){
+            int prev=k-1;
+            int curr=k;
+            int next=k+1;
+            int value=stones[i+1]-stones[i];
+            if((value==prev) || (value==curr) || (value==next) )
+            {
+
+                k=value;
+
+            }
+            else{
+                return false;
+            }
+            if(prevK>k){
+                k=prevK+k;
+            }
+            else {
+                prevK = k;
+            }
+
+        }
+        return true;
     }
 
     static public int removeElement(int[] nums, int val) {
