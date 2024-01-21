@@ -5,11 +5,40 @@ import jdk.internal.util.xml.impl.Pair;
 import java.util.*;
 
 public class Temp {
+
+    static HashMap<Integer,Integer> map=new HashMap<>();
+    static List<Integer> list=new ArrayList<>();
     public static void main(String[] args) {
-        int[] nums={1,2,3,4,5};
+       insert(1);
+       insert(2);
+       insert(1);
+       insert(3);
+       remove(1);
+        System.out.println();
+    }
 
-        System.out.println(canCross(nums));
+    public static boolean insert(int val) {
+        if(map.containsKey(val)){
+            return false;
+        }
+        list.add(val);
+        map.put(val,list.size()-1);
+        return true;
+    }
+    public static boolean remove(int val) {
+        if(!map.containsKey(val)){
+            return false;
+        }
+        int index=map.get(val);
+        int ind=list.get(list.size()-1);
+        if(index!=list.size()-1){
+            list.set(index,ind);
+            map.put(ind,index);
+        }
 
+        list.remove(list.size()-1);
+        map.remove(val);
+       return true;
     }
 
     public static int maxProfit(int[] prices) {
