@@ -1,4 +1,4 @@
-package main.java.algos.backtracking;
+package main.java.algos.recuandbacktracking;
 
 public class PrintNums {
     public static void main(String[] args) {
