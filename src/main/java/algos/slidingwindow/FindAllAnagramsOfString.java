@@ -31,7 +31,7 @@ import java.util.Map;
 
 public class FindAllAnagramsOfString {
     public static void main(String[] args) {
-        System.out.println(findAnagrams("cbaebabacd","abc"));
+        System.out.println(findAnagrams("eidbaooo","ab"));
     }
 
     public static List<Integer> findAnagrams(String s, String p) {
