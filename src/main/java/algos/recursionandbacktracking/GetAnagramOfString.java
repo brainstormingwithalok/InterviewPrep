@@ -1,4 +1,4 @@
-package main.java.algos.recuandbacktracking;
+package main.java.algos.recursionandbacktracking;
 
 import java.util.ArrayList;
 import java.util.List;
