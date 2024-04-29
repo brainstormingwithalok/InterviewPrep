@@ -1,5 +1,7 @@
 package main.java.algos.tree;
 
+import java.util.Stack;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -20,7 +22,6 @@ public class MaximumDepth {
         TreeNode root=new TreeNode(3);
         root.left=new TreeNode(9);
         root.right=new TreeNode(20);
-
         root.right.left=new TreeNode(15);
         root.right.right=new TreeNode(7);
         System.out.println(maxDepth(root));
@@ -29,11 +30,10 @@ public class MaximumDepth {
     public static int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;
-        } else {
-            int left_height = maxDepth(root.left);
-            int right_height = maxDepth(root.right);
-            return java.lang.Math.max(left_height, right_height) + 1;
         }
+        int left_height = maxDepth(root.left);
+        int right_height = maxDepth(root.right);
+        return java.lang.Math.max(left_height, right_height) + 1;
     }
 
     public static int maxDepth1(TreeNode root) {

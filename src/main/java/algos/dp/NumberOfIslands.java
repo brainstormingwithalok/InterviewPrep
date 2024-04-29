@@ -1,4 +1,4 @@
-package main.java.algos.array;
+package main.java.algos.dp;
 //Pre code
 //https://www.youtube.com/watch?v=ErPZFxugYkI
 
@@ -32,14 +32,18 @@ package main.java.algos.array;
  */
 public class NumberOfIslands {
     public static void main(String[] args) {
-
+        char[][] isLand={{'1','1','0','0','0'},
+                        {'1','1','0','0','0'},
+                {'0','0','1','0','0'},
+                {'0','0','0','1','1'}};
+        System.out.println(numIslands(isLand));
     }
 
     public static int numIslands(char[][] grid) {
         boolean[][] visited=new boolean[grid.length][grid[0].length];
         int count=0;
         for(int i=0;i<grid.length;i++){
-            for(int j=0;j<grid[i].length;j++){
+            for(int j=0;j<grid[0].length;j++){
                 if(visited[i][j]==false && grid[i][j]=='1'){
                     count++;
                     drawTreeForComponent(grid,i,j,visited);

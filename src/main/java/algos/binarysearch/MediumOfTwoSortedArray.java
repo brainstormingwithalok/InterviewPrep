@@ -43,6 +43,8 @@ package main.java.algos.binarysearch;
 
 import jdk.internal.util.xml.impl.Pair;
 
+import java.util.PriorityQueue;
+
 /**
  *
  */

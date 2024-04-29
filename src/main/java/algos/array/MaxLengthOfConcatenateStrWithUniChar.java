@@ -36,6 +36,9 @@ Input: arr = ["abcdefghijklmnopqrstuvwxyz"]
 Output: 26
 Explanation: The only string in arr has all 26 characters.
  */
+/*
+Complexity -> time= 2^n (because one to choose or not ) , space o(n)
+ */
 public class MaxLengthOfConcatenateStrWithUniChar {
     public static void main(String[] args) {
     //["un","iq","ue"]  -> Output=4

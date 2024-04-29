@@ -16,7 +16,6 @@ public class GetAnagramOfString {
             baseList.add("");
             return baseList;
         }
-
         //get first character say a
         char c=str.charAt(0);
         //Get all the anagram for remaining

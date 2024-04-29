@@ -1,6 +1,5 @@
 package main.java.algos.miscellenious;
 
-import java.net.PasswordAuthentication;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +11,7 @@ public class LRUCache {
     private int age;
     private Map<Integer,Pair> map;
 
-    class Pair{
+    static class Pair{
         int key;
         int age;
         Pair(int key,int age){
@@ -20,6 +19,7 @@ public class LRUCache {
             this.age=age;
         }
     }
+    //This will store the pair and top will give the minimum key value
     PriorityQueue<Pair> pq=new PriorityQueue<>(new Comparator<Pair>() {
         @Override
         public int compare(Pair o1, Pair o2) {
