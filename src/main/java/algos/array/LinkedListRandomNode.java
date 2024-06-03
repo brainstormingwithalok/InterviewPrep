@@ -5,6 +5,9 @@ import java.util.Random;
 /**
  * Reservoir Sampling
  * O(1) space, O(n) time
+ *
+ * What is reservoir sampling
+ * https://www.youtube.com/watch?v=DWZqBN9efGg
  */
 public class LinkedListRandomNode {
     private Random rand;

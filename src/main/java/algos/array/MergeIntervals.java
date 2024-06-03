@@ -1,8 +1,6 @@
 package main.java.algos.array;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * Given an array of intervals where intervals[i] = [starti, endi],
@@ -29,15 +27,13 @@ public class MergeIntervals {
         int[][] input = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
 //        int[][] input={{1,4},{0,4}};
         int[][] output = merge(input);
-        System.out.println();
+
     }
 
     public static int[][] merge(int[][] intervals) {
-
         List<int[]> result = new ArrayList<>();
-
         Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
-
+        //In case of list sort use //Collections.sort(intervals,(a,b)-> a.get(0).compareTo(b.get(0)));
         result.add(intervals[0]);
         for (int[] interval : intervals) {
             int x1 = result.get(result.size() - 1)[0];
